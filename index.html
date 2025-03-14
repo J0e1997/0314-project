@@ -22,6 +22,37 @@
         margin: 0;
         padding: 20px;
 }
+        <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-image: url('https://imgur.com/SLmCm8v.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* RWD 設定：在小螢幕上自適應背景圖片 */
+    @media (max-width: 768px) {
+        body {
+            background-size: contain; /* 避免圖片被裁切 */
+            background-attachment: scroll; /* 讓背景隨滾動條移動 */
+        }
+    }
+
+    @media (max-width: 480px) {
+        body {
+            background-image: url('https://imgur.com/your-mobile-image.png'); /* 手機版專用圖片 */
+            background-size: cover;
+        }
         h1.valentine-title {
         color: #000;
         text-align: center;
